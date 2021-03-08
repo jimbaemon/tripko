@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "./MockSerivce/board";
+import { getBoards } from "./MockSerivce/board";
+import { getUsers } from "./MockSerivce/user";
+import { getComments } from "./MockSerivce/comment";
 function App() {
+  const boards = getBoards();
+  const users = getUsers();
+  const comments = getComments();  
   return (
     <div className="App">
       <header className="App-header">
