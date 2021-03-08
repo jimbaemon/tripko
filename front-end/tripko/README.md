@@ -2,8 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to get mock data
 
+ 1. Import methods 
+ 2. Assign values to the const or let variables
+  ``` 
+  // import methods at the top of the file
+  import { getBoards } from "./MockSerivce/board";
+  import { getUsers } from "./MockSerivce/user";
+  import { getComments } from "./MockSerivce/comment";
+  
+  
+  //get the data
+  const boards = getBoards();
+  const users = getUsers();
+  const comments = getComments();  
+  ```
+
+
+## How to start a front end project
 In the project directory, you can run:
 
 ### `yarn start`
