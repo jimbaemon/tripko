@@ -1,2 +1,2 @@
-interface Commnet { };
+interface Commnet {}
 export default Commnet;

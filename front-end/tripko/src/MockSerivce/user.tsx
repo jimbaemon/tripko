@@ -1,58 +1,59 @@
-import mocker from "mocker-data-generator";
+import mocker from 'mocker-data-generator';
 
 const user = {
   user_id: {
-    chance: "guid",
+    chance: 'guid',
   },
   username: {
-    faker: "name.firstName",
+    faker: 'name.firstName',
   },
   password: {
-    faker: "internet.password",
+    faker: 'internet.password',
   },
   name: {
-    faker: "name.firstName",
+    faker: 'name.firstName',
   },
   email: {
-    faker: "internet.email",
+    faker: 'internet.email',
   },
   authority: {
     faker: 'random.number({"min":1, "max":3})',
   },
   created_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
   description: {
-    faker: "lorem.sentence",
+    faker: 'lorem.sentence',
   },
   thumbnail: {
-    faker: "internet.avatar",
+    faker: 'internet.avatar',
   },
   facebook: {
-    faker: "internet.url",
+    faker: 'internet.url',
   },
   website: {
-    faker: "internet.url",
+    faker: 'internet.url',
   },
   instagram: {
-    faker: "internet.url",
+    faker: 'internet.url',
   },
   deleted_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   modified_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   deleted_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
 };
 
-export const getUsers = () => {
-  return mocker()
-    .schema("payload", user, 100)
-    .build(function (err, data) {
+export const getUsers = () =>
+  // eslint-disable-next-line implicit-arrow-linebreak
+  mocker()
+    .schema('payload', user, 100)
+    .build((err, data) => {
+      // eslint-disable-next-line no-console
       console.log(data);
       return data;
     });
-};

@@ -1,2 +1,2 @@
-interface User { }
+interface User {}
 export default User;

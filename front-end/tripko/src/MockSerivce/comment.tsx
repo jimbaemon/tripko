@@ -1,42 +1,40 @@
-import mocker from "mocker-data-generator";
+import mocker from 'mocker-data-generator';
 
 const comment = {
   comment_id: {
-    chance: "guid",
+    chance: 'guid',
   },
   comment_parent_id: {
-    chance: "guid",
+    chance: 'guid',
   },
   board_id: {
-    chance: "guid",
+    chance: 'guid',
   },
   created_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   content: {
-    faker: "lorem.sentence",
+    faker: 'lorem.sentence',
   },
   created_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
   modified_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
   deleted_yn: {
-    faker: "random.boolean",
+    faker: 'random.boolean',
   },
   deleted_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   deleted_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
 };
 
-export const getComments = () => {
-  return mocker()
-    .schema("payload", comment, 100)
-    .build(function (err, data) {
-      return data;
-    });
-};
+export const getComments = () =>
+  // eslint-disable-next-line implicit-arrow-linebreak
+  mocker()
+    .schema('payload', comment, 100)
+    .build((err, data) => data);

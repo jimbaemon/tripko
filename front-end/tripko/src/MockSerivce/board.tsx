@@ -1,51 +1,49 @@
-import mocker from "mocker-data-generator";
+import mocker from 'mocker-data-generator';
 
 const board = {
   board_id: {
-    chance: "guid",
+    chance: 'guid',
   },
   created_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   place: {
-    faker: "address.city",
+    faker: 'address.city',
   },
   title: {
-    faker: "lorem.sentence",
+    faker: 'lorem.sentence',
   },
   thumbnail: {
-    faker: "image.city",
+    faker: 'image.city',
   },
   content: {
-    faker: "lorem.words",
+    faker: 'lorem.words',
   },
   short_description: {
-    faker: "lorem.sentence",
+    faker: 'lorem.sentence',
   },
   like_count: {
-    faker: "random.number",
+    faker: 'random.number',
   },
   created_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
   modified_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
   delete_yn: {
-    faker: "random.boolean",
+    faker: 'random.boolean',
   },
   deleted_by: {
-    chance: "guid",
+    chance: 'guid',
   },
   deleted_at: {
-    faker: "date.past",
+    faker: 'date.past',
   },
 };
 
-export const getBoards = () => {
-  return mocker()
-    .schema("payload", board, 100)
-    .build(function (err, data) {
-      return data;
-    });
-};
+export const getBoards = () =>
+  // eslint-disable-next-line implicit-arrow-linebreak
+  mocker()
+    .schema('payload', board, 100)
+    .build((err, data) => data);

@@ -1,3 +1,3 @@
-interface Board { }
+interface Board {}
 
 export default Board;
