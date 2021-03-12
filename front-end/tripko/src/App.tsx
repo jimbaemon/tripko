@@ -1,25 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import 'App.css';
-import { getUsers } from 'MockSerivce/user';
+import LoginForm from 'components/auth/login/LoginForm';
+import { Route, Switch } from 'react-router-dom';
+import RegisterForm from 'components/auth/register/RegisterForm';
 
 function App() {
-  useEffect(() => {
-    getUsers();
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route path="/" component={LoginForm} exact />
+      <Route path="/register" component={RegisterForm} />
+    </Switch>
   );
 }
 
